@@ -1,5 +1,5 @@
 # Run Lazarus IDE inside docker container
-Run command bellow before you run your container
+Run command bellow before you run your container  
 `xhost local:root`  
 The above command allows root user to temporaly access X session of the current user
 
