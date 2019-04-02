@@ -18,3 +18,7 @@ RUN wget https://ufpr.dl.sourceforge.net/project/lazarus/Lazarus%20Linux%20amd64
 RUN dpkg -i fpc*.deb
 
 RUN dpkg -i lazarus*.deb
+
+RUN rm *.deb
+
+RUN apt-get clean && apt-get autoremove -y
