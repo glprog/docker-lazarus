@@ -7,11 +7,11 @@ The above command allows root user to temporaly access X session of the current 
 In order to run Lazarus IDE inside docker, it's possible to set parameters in two different ways:
 
 1)
-`docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --privileged glaucosginez/lazarus`  
+`docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --privileged glaucosginez/lazarus startlazarus`  
 The problem in above command is the use o `--privileged` option, this option tell to docker that he grant access to host devices to the container
 
 2)
-`docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --security-opt seccomp=unconfined glaucosginez/lazarus`  
+`docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --security-opt seccomp=unconfined glaucosginez/lazarus startlazarus`  
 
 The above command is better than first because it uses `--security-opt seccomp=unconfined` instead `--privileged`
 
