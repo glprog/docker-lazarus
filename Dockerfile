@@ -19,6 +19,13 @@ RUN dpkg -i fpc*.deb
 
 RUN dpkg -i lazarus*.deb
 
+RUN wget https://deb.nodesource.com/setup_10.x \
+    && chmod +x setup_10.x \
+    && ./setup_10.x \
+    && apt-get install -y nodejs
+
 RUN rm *.deb
+
+RUN rm setup_10.x
 
 RUN apt-get clean && apt-get autoremove -y
