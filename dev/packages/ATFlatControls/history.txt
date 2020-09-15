@@ -1,0 +1,84 @@
+
+2019.11.03
++ ATListbox: prop ScrollStyleHorz, ScrollStyleVert
++ ATListbox: event OnCalcScrollWidth
+
+2019.10.30
++ packages ATTabs and ATCanvasPrimitives merged in ATFlatControls
++ ATListbox: added OnDrawScrollbar
+
+2019.10.01
++ ATButton: added prop ArrowKind (enum)
+
+2019.09.26
++ ATListbox: added ShowXMark
++ ATListbox: added OnClickXMark
++ ATListbox: if Items.Objects[index]>0, then instead of x mark, listbox paints circle mark (like VSCode)
++ added theme props: XMark*, ColorArrowsOver
+
+2019.09.13
+- ATScrollbar: fixed very slow repainting on dragging thumb, on big files in CudaText 
+
+2019.09.05
++ ATStatusbar: added cell prop FontName, FontSize
+
+2019.06.11
++ ATButton: added props ItemsShort (for Kind=TextChoice), ShowShortItems, TextAlign
+
+2019.06.08
++ ATButton: added prop TextOverlay (to show in the button corner)
++ added theme props: ColorFontOverlay, ColorBgOverlay, TextOverlayPosition
+
+2019.06.01
++ ATListbox: added prop ColumnSizes (array of integer, size<0 means percents)
++ ATListbox: added prop ColumnSeparator
+
+2019.05.20
++ ATStatusbar: added Theme prop
+
+2019.05.16
+* ATScrollbar: moved several props into Theme
++ ATScrollbar: prop IndentCorner is now in percents 
++ ATScrollbar: added Theme items: InstantMoveOnClick, ThumbMarker*
+
+2019.05.14
+* ATGauge: renamed type to TATGauge
++ ATGauge: gauge is now themed (uses ATFlatThemes), added Theme prop
+
+2019.05.08
++ added items to theme record: ScalePercents, ScaleFontPercents - they allow to scale all buttons in app
+
+2018.12.30
++ ATButton: added workaround for LCL issue: MouseLeave method not called if mouse leaves app window area (Linux)
+
+2018.07.19
++ ATListbox: added props:
+    - HotTrack
+    - HotTrackIndex (public)
+    - ColorHotTrackBack
++ ATListbox: added props IndentLeft, IndentTop    
+
+2018.06.08
++ ATListbox: added props VirtualMode, VirtualItemCount
+    If VirtualMode=false, listbox uses item count from Items prop. 
+    If true, listbox uses item count from VirtualItemCount prop.
++ ATListbox: prop ItemCount gets count for all modes, and is read-only
+
+2018.05.21
++ ATScroll: props Position/Min/Max/PageSize made published
++ ATScroll: added props MinSizeToShowThumb, MinSizeOfThumb
+
+2018.05.06
++ ATButton: added prop Theme of type ^TATButtonTheme
+
+2018.05.02
++ ATButton: support dropdown button with arrow+icon
+
+2018.04.29
++ many controls: use ColorToRGB() to support system colors
+
+2018.04.23
++ ATButton: AutoSize implemented
++ ATButton: added theme item ATButtonTheme.GapForAutosize=4
+
+...

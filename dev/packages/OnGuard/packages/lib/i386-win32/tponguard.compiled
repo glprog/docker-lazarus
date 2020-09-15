@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\fpcupdeluxe\laz2.0.8\fpc\bin\i386-win32\fpc.exe" Date="1351907491"/>
+  <Params Value=" -MObjFPC -Scgi -O1 -g -gl -l -vewnhibq -FiC:\fpcupdeluxe\laz2.0.8\config_lazarus\onlinepackagemanager\packages\OnGuard\source -FuC:\fpcupdeluxe\laz2.0.8\config_lazarus\onlinepackagemanager\packages\OnGuard\source -FuC:\fpcupdeluxe\laz2.0.8\lazarus\packager\units\i386-win32 -FuC:\fpcupdeluxe\laz2.0.8\config_lazarus\onlinepackagemanager\packages\OnGuard\packages\ -FUC:\fpcupdeluxe\laz2.0.8\config_lazarus\onlinepackagemanager\packages\OnGuard\packages\lib\i386-win32\ tponguard.pas"/>
+</CONFIG>

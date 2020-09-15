@@ -1,0 +1,173 @@
+object fmMain: TfmMain
+  Left = 428
+  Height = 440
+  Top = 250
+  Width = 492
+  Caption = 'ATListbox demo'
+  ClientHeight = 440
+  ClientWidth = 492
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.1.0.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 168
+    Top = 272
+    Width = 492
+    Align = alBottom
+    ClientHeight = 168
+    ClientWidth = 492
+    TabOrder = 0
+    object chkThemedScroll: TCheckBox
+      Left = 8
+      Height = 24
+      Top = 0
+      Width = 141
+      Caption = 'themed scrollbar'
+      Checked = True
+      OnChange = chkThemedScrollChange
+      State = cbChecked
+      TabOrder = 0
+    end
+    object chkOwnerDrawn: TCheckBox
+      Left = 8
+      Height = 24
+      Top = 24
+      Width = 114
+      Caption = 'owner-drawn'
+      Checked = True
+      OnChange = chkOwnerDrawnChange
+      State = cbChecked
+      TabOrder = 1
+    end
+    object chkVirtual: TCheckBox
+      Left = 8
+      Height = 24
+      Top = 49
+      Width = 262
+      Caption = 'virtual items (don''t use Items prop)'
+      Checked = True
+      OnChange = chkVirtualChange
+      State = cbChecked
+      TabOrder = 2
+    end
+    object chkHotTrack: TCheckBox
+      Left = 8
+      Height = 24
+      Top = 72
+      Width = 87
+      Caption = 'hot track'
+      OnChange = chkHotTrackChange
+      TabOrder = 3
+    end
+    object chkDoubleSize: TCheckBox
+      Left = 8
+      Height = 24
+      Top = 96
+      Width = 152
+      Caption = 'double item height'
+      OnChange = chkDoubleSizeChange
+      TabOrder = 4
+    end
+    object TrackScale: TTrackBar
+      Left = 112
+      Height = 46
+      Top = 120
+      Width = 128
+      Max = 300
+      Min = 100
+      OnChange = TrackScaleChange
+      Position = 100
+      TickStyle = tsNone
+      TabOrder = 5
+    end
+    object Label1: TLabel
+      Left = 12
+      Height = 17
+      Top = 132
+      Width = 65
+      Caption = 'scale in %'
+      ParentColor = False
+    end
+    object ButtonGoto: TButton
+      Left = 332
+      Height = 25
+      Top = 110
+      Width = 108
+      Caption = 'scroll to...'
+      OnClick = ButtonGotoClick
+      TabOrder = 6
+    end
+    object ComboShowX: TComboBox
+      Left = 332
+      Height = 27
+      Top = 72
+      Width = 148
+      ItemHeight = 0
+      ItemIndex = 0
+      Items.Strings = (
+        'no X marks'
+        'X for all items'
+        'X for hot item'
+      )
+      OnChange = ComboShowXChange
+      Style = csDropDownList
+      TabOrder = 7
+      Text = 'no X marks'
+    end
+    object comboScrollHorz: TComboBox
+      Left = 384
+      Height = 27
+      Top = 40
+      Width = 96
+      ItemHeight = 0
+      Items.Strings = (
+        'hide'
+        'show'
+        'auto'
+      )
+      OnChange = comboScrollHorzChange
+      Style = csDropDownList
+      TabOrder = 8
+    end
+    object Label2: TLabel
+      Left = 311
+      Height = 17
+      Top = 45
+      Width = 60
+      Caption = 'horz bar:'
+      ParentColor = False
+    end
+    object Label3: TLabel
+      Left = 311
+      Height = 17
+      Top = 13
+      Width = 57
+      Caption = 'vert bar:'
+      ParentColor = False
+    end
+    object comboScrollVert: TComboBox
+      Left = 384
+      Height = 27
+      Top = 8
+      Width = 96
+      ItemHeight = 0
+      Items.Strings = (
+        'hide'
+        'show'
+        'auto'
+      )
+      OnChange = comboScrollVertChange
+      Style = csDropDownList
+      TabOrder = 9
+    end
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 288
+    Top = 377
+    object MenuItem1: TMenuItem
+      Caption = 'Test item'
+      OnClick = MenuItem1Click
+    end
+  end
+end
